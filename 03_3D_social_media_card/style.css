@@ -1,0 +1,116 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(214, 214, 214);
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 50px;
+    color: black;
+}
+
+.social-card {
+    list-style-type: none;
+    background: radial-gradient(rgb(230, 230, 230), rgb(230, 230, 230));
+    padding: 15px 25px;
+    transform: rotate(-30deg) skewX(25deg);
+    box-shadow: -15px 15px 8px rgba(0, 0, 0, 0.521);
+    position: relative;
+    transition: all 0.3s linear;
+
+    &::before {
+        content: '';
+        position: absolute;
+        background: radial-gradient(rgb(230, 230, 230), rgb(230, 230, 230));
+        height: 100%;
+        width: 10px;
+        top: 0;
+        left: -10px;
+        transform: skewY(-45deg) translate(0px, 5px);
+    }
+
+    &::after {
+        content: '';
+        position: absolute;
+        background: radial-gradient(rgb(230, 230, 230), rgb(230, 230, 230));
+        height: 10px;
+        width: 100%;
+        bottom: -10px;
+        left: 0;
+        transform: skewX(-45deg) translate(-5px, 0px);
+    }
+}
+
+.social-card:nth-child(1) {
+    &:hover {
+        background: radial-gradient(rgb(8, 102, 255), rgb(5, 63, 156));
+        cursor: pointer;
+        color: white;
+        box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.562);
+    }
+
+    &:hover::after,
+    &:hover::before {
+        background: radial-gradient(rgb(8, 102, 255), rgb(5, 63, 156));
+    }
+}
+
+.social-card:nth-child(2) {
+    &:hover {
+        background: radial-gradient(rgb(253, 15, 181), rgb(173, 9, 66));
+        cursor: pointer;
+        color: white;
+        box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.562);
+    }
+
+    &:hover::after,
+    &:hover::before {
+        background: radial-gradient(rgb(253, 15, 181), rgb(173, 9, 66));
+    }
+}
+
+.social-card:nth-child(3) {
+    &:hover {
+        background: radial-gradient(rgb(10, 102, 194), rgb(6, 56, 105));
+        cursor: pointer;
+        color: white;
+        box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.562);
+    }
+
+    &:hover::after,
+    &:hover::before {
+        background: radial-gradient(rgb(10, 102, 194), rgb(6, 56, 105));
+    }
+}
+
+.social-card:nth-child(4) {
+    &:hover {
+        background: radial-gradient(rgb(49, 49, 49), rgb(0, 0, 0));
+        cursor: pointer;
+        color: white;
+        box-shadow: -25px 25px 15px rgba(0, 0, 0, 0.562);
+    }
+
+    &:hover::after,
+    &:hover::before {
+        background: radial-gradient(rgb(50, 50, 50), rgb(0, 0, 0));
+    }
+}

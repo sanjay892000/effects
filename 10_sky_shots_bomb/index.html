@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <title>Sky Shot — Canvas Firework</title>
+    <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+    <div id="ui">
+        <button id="launchBtn">Launch</button>
+        <div class="toggle">
+            <input type="checkbox" id="auto" />
+            <label for="auto">Auto launch</label>
+        </div>
+        <div class="toggle">
+            <label for="mode">Mode</label>
+            <select id="mode">
+                <option value="star">Starburst</option>
+                <option value="ring">Ring</option>
+                <option value="flower">Flower</option>
+            </select>
+        </div>
+        <div style="opacity:0.8;font-size:12px;margin-left:8px">Click canvas to aim</div>
+    </div>
+
+    <canvas id="canvas"></canvas>
+
+    <div class="hint">Tip: Click / Tap anywhere to launch a rocket toward that point.</div>
+
+    <script src="./script.js"></script>
+</body>
+
+</html>

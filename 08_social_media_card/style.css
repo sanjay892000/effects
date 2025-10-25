@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #131313;
+    color: rgba(128, 128, 128, 0.5);
+}
+
+a{
+    text-decoration: none;
+    color: inherit;
+}
+
+.social-container {
+    display: flex;
+    gap: 50px;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.social-card{
+    list-style-type: none;
+    background-color: rgba(120, 120, 120, 0.349);
+    padding:50px;
+    border-radius: 5px;
+    position: relative;
+    a>p{
+        font-size: 20px;
+        font-weight: 600;
+        font-style: italic;
+        position: relative;
+        z-index: -1;
+    }
+
+    &::after{
+        content: '';
+        position: absolute;
+        inset: -5px;
+        z-index: -1;
+        border: 3px solid rgba(73, 73, 73, 0.523);
+        border-radius: 5px;
+    }
+}
+
+.social-card::before{
+    content: '';
+    position: absolute;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    filter: blur(60px);
+
+    z-index: -2;
+    display: none;
+}
+.social-card:nth-child(1)::before{
+    background-color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 15px rgb(0, 255, 255);
+}
+.social-card:nth-child(1):hover{
+    color: rgb(0, 255, 255);
+    box-shadow: 0px 0px 10px rgb(0, 255, 255);
+}
+.social-card:nth-child(2)::before{
+    background-color: rgb(255, 196, 0);
+    box-shadow: 0px 0px 15px #ffcc00;
+}
+
+.social-card:nth-child(2):hover{
+    color: rgb(255, 196, 0);
+    box-shadow: 0px 0px 10px #ffcc00;
+}
+
+.social-card:nth-child(3)::before{
+    background-color: rgb(255, 0, 183);
+    box-shadow: 0px 0px 15px #ff009d;
+}
+.social-card:nth-child(3):hover{
+    color: rgb(255, 0, 183);
+    box-shadow: 0px 0px 10px #ff009d;
+}
+.social-card:nth-child(4)::before{
+    background-color: rgb(0, 119, 255);
+    box-shadow: 0px 0px 15px #007bff;
+}
+.social-card:nth-child(4):hover{
+    color: rgb(0, 119, 255);
+    box-shadow: 0px 0px 10px #007bff;
+}
+
+.social-card:hover::before{
+    display: inline-block;
+    top: calc( var(--y) - 50px);
+    left: calc( var(--x) - 50px);
+}
+
+.social-icon{
+    height: 100px;
+    width: 100px;
+    background-color: rgba(61, 61, 61, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    font-size: 30px;
+    margin-bottom:35px;
+    position: relative;
+    z-index: -1;
+}

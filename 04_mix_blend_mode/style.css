@@ -1,0 +1,30 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    background: center / cover no-repeat url('./multicolor.jpg');
+    position: relative;
+
+
+    &::after {
+        content: '';
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        z-index: 1;
+        background: center / cover no-repeat url('./mask.png');
+        mix-blend-mode: overlay;
+        mix-blend-mode: screen;
+        mix-blend-mode:multiply;
+        mix-blend-mode:difference;
+    }
+
+}

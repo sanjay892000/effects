@@ -1,0 +1,120 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+body {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(6, 6, 6);
+}
+
+.main-container {
+    height: 80%;
+    width: 40%;
+    background: url('./bgimage.jpg') center;
+    background-size: cover;
+    padding: 50px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(transparent 50%, rgba(40, 40, 40, 0.696) 60%, rgb(0, 0, 0));
+    }
+
+}
+
+.card-box {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: flex-end;
+    overflow: hidden;
+    position: relative;
+    z-index: 2;
+
+    >div {
+        height: 180px;
+        width: 150px;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000px;
+
+        &:hover .userbg {
+            transform: rotateX(70deg);
+            filter: blur(3px) contrast(150%);
+        }
+
+        &:hover .user {
+            transform: scale(2.5);
+        }
+    }
+}
+
+#druide {
+    position: absolute;
+    width: 150px;
+    height: 35px;
+    text-align: center;
+    padding: 10px 15px;
+    background: rgb(84, 84, 103);
+    z-index: 30;
+    color: white;
+    left: 58px;
+    top: 455px;
+    text-transform: uppercase;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition: all 0.5s linear;
+}
+
+#necro {
+    position: absolute;
+    width: 145px;
+    height: 35px;
+    text-align: center;
+    padding: 10px 15px;
+    background: rgb(44, 61, 74);
+    z-index: 30;
+    color: white;
+    right: 60px;
+    top: 455px;
+    text-transform: uppercase;
+    transform-origin: top;
+    transform: rotateX(90deg);
+    transition: all 0.5s linear;
+}
+
+.userbg {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    filter: brightness(60%);
+    transition: all 0.5s linear;
+    transform-origin: bottom;
+    filter: blur(0px) contrast(100%);
+}
+
+.user {
+    height: auto;
+    width: 100%;
+    z-index: 5;
+    transform: scale(2) translateY(55%);
+    transform-origin: bottom center;
+    transition: all 0.5s linear;
+
+}
